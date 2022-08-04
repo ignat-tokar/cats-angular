@@ -1,0 +1,11 @@
+<div *ngIf="isUpload">
+  
+  <select [formControl]="name">
+    <option value='all'>All</option>
+    <option  *ngFor="let breed of breedsArray" value={{breed[1]}}>{{breed[0]}}</option>    
+  </select>
+
+  <div *ngFor="let cat of imagesArray">
+    <img src={{cat}} />
+  </div>
+</div>
